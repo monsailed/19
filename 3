@@ -1,0 +1,9 @@
+const inputName = document.querySelector("#name-input");
+const helloButton = document.querySelector("#hello-btn");
+const pWelcome = document.querySelector(".welcome-text");
+
+helloButton.addEventListener("click", () => {
+    const userName = inputName.value;
+    pWelcome.textContent = "Привет, " + userName + "!";
+    console.log(pWelcome.textContent);
+})
