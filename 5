@@ -1,0 +1,25 @@
+const inputTask = document.querySelector("#task-input");
+const btnTask = document.querySelector("#add-btn");
+const ul = document.querySelector("#task-list");
+
+btnTask.addEventListener("click", () => {
+    const taskText = inputTask.value;
+    
+    const deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "❌";
+    
+    deleteBtn.addEventListener("click", () => {
+        li.remove();
+    })
+
+    if(taskText === "") {
+        return
+    }
+    
+    const li = document.createElement("li");
+    li.textContent = inputTask.value
+    li.append(deleteBtn);
+    ul.append(li);
+    
+    inputTask.value = "";
+})
