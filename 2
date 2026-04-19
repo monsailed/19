@@ -1,0 +1,9 @@
+const myButton = document.querySelector("#play-btn");
+const paragraf = document.querySelector(".status-message")
+
+// Говорим кнопке: "Слушай 'click'. Когда он произойдет, запусти эту стрелочную функцию"
+myButton.addEventListener("click", () => {
+    myButton.textContent = "Запуск игры...";
+    paragraf.textContent = "Подключение установлено!";
+    paragraf.style.color = "green";
+})
